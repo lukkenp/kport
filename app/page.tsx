@@ -1,6 +1,6 @@
 import { AuroraBackground } from "@/components/AuroraBackground";
 import { TextGenerateEffect } from "@/components/TextGenerateEffect";
-import { GlassForm } from "@/components/GlassForm";
+import { GlassCardInteractive } from "@/components/GlassCardInteractive";
 
 export default function Home() {
   return (
@@ -29,9 +29,9 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Right Column: Form */}
+          {/* Right Column: Interactive Card */}
           <div className="flex-1 w-full max-w-md lg:max-w-none flex justify-center lg:justify-end">
-            <GlassForm />
+            <GlassCardInteractive />
           </div>
 
         </div>

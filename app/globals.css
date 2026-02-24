@@ -1,1 +1,76 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0a;
+  --color-foreground: #ffffff;
+}
+
+@layer components {
+  .all-unset {
+    all: unset;
+  }
+  
+  .glass-button-wrap {
+    position: relative;
+    display: inline-flex;
+    padding: 1px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+  }
+  
+  .glass-button-wrap:hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  }
+
+  .glass-button {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(12px);
+    border-radius: 9999px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .glass-button:hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  }
+
+  .glass-button-text {
+    background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-button-shadow {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 9999px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Primary Variant (Neon Green) */
+  .glass-button-wrap.primary {
+    background: linear-gradient(to bottom, rgba(204, 255, 0, 0.5) 0%, rgba(204, 255, 0, 0.1) 100%);
+  }
+  
+  .glass-button-wrap.primary:hover {
+    background: linear-gradient(to bottom, rgba(204, 255, 0, 0.8) 0%, rgba(204, 255, 0, 0.2) 100%);
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+  }
+
+  .glass-button-wrap.primary .glass-button {
+    background: linear-gradient(to bottom, rgba(204, 255, 0, 0.15) 0%, rgba(204, 255, 0, 0.05) 100%);
+    box-shadow: inset 0 1px 1px rgba(204, 255, 0, 0.3);
+  }
+
+  .glass-button-wrap.primary:hover .glass-button {
+    background: linear-gradient(to bottom, rgba(204, 255, 0, 0.25) 0%, rgba(204, 255, 0, 0.1) 100%);
+  }
+
+  .glass-button-wrap.primary .glass-button-text {
+    background: linear-gradient(to bottom, #CCFF00 0%, rgba(204, 255, 0, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
